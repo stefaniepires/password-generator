@@ -1,4 +1,14 @@
 // Assignment code here
+alert("Press Generate to get your custom password!");
+
+//Object Code to store the input
+
+const randomFunctions = {
+  lowerCase: randomLowerCase,
+  upperCase: randomUpperCase,
+  number: randomNumber,
+  symbols: randomSymbol,
+};
 
 //functions here (4)
 
