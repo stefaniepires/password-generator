@@ -13,8 +13,6 @@ var specialCharacters = ["`", "!", "@", "#", "$", "%", "^","&", "*", "(", ")", "
 //Array of numbers
 var numbers =["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-//variable for storing user input
-var selectedCharacters = ''
 
 var passwordOptions = function () {
   //selecting length 
@@ -49,10 +47,7 @@ var chooseNum = confirm (
 "Should your password have numbers?"
 );
 
-if (selectedCharacters === null || selectedCharacters === "") {
-    window.alert("You must select at least one character type. Please try again.");
-    return generatePassword();
-} 
+
 
  //Object to store the input
  var passwordInput = {
