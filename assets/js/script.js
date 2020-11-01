@@ -16,6 +16,22 @@ var numbers =["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //variable for storing user input
 var selectedCharacters = ''
 
+var passwordOptions = function () {
+  //selecting length 
+  var passLength = parseInt (
+    prompt("How many characters would you like your password to be? (Select a number 10-129)")
+    );
+    //If invalid number return to question
+    if (passLength <= 9 || passLength > 129) {
+      alert("Pick a value between 10 - 129!");
+      return;
+    } 
+    //Return if entry is NaN (Not a number)
+    if(isNaN(passLength) === true) {
+      alert("Pick a number that is between 10 - 129!");
+      return;
+    }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
