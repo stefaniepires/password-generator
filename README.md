@@ -10,4 +10,4 @@ Generate a strong password in just a few clicks. Choose if you want your passwor
 ## Website
 https://steftinsley.github.io/password-generator/
 
-![Screenshot of Password Generator](TBD)
+![Screenshot of Password Generator](https://github.com/steftinsley/password-generator/blob/main/assets/Screenshot.JPG)
