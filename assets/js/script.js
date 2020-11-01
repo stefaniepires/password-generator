@@ -32,6 +32,40 @@ var passwordOptions = function () {
       return;
     }
 
+ //For selecting lowercase
+ var chooseLowerCase = confirm (
+  "Should your password have lower case letters?"
+);
+  //For selecting uppercase
+  var chooseUpperCase = confirm (
+    "Should your password have upper case letters?"
+  );
+//For selecting special characters
+var chooseSpecialChar = confirm( 
+  "Should your password have special characters?"
+);
+//For selecting numbers
+var chooseNum = confirm (
+"Should your password have numbers?"
+);
+
+if (selectedCharacters === null || selectedCharacters === "") {
+    window.alert("You must select at least one character type. Please try again.");
+    return generatePassword();
+} 
+
+ //Object to store the input
+ var passwordInput = {
+  passLength: passLength,
+  chooseSpecialChar: chooseSpecialChar,
+  chooseLowerCase: chooseLowerCase,
+  chooseUpperCase: chooseUpperCase,
+  chooseNum: chooseNum
+};
+return passwordInput;
+}
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
