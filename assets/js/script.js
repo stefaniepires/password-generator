@@ -65,8 +65,44 @@ if (selectedCharacters === null || selectedCharacters === "") {
 return passwordInput;
 }
 
+//function to randomize selected array
+function createRandom(array) {
+  var randomChar = Math.floor(Math.random() * array.length);
+  var randomFinal = array[randomChar];
 
+  return randomFinal;
+}
 
+//function to create password
+function generatePassword() {
+  //function to pull what the user input
+  var userOptions = passwordOptions();
+  
+  //array to store password
+  var passwordFinal = [];
+  
+  //array to store random values 
+  var rndmValues = [];
+
+  //pulling random characters from each array. If it is true, then put into rndmValue array after pushing through random function
+  if(userOptions.chooseSpecialChar) {
+    rndmValues = rndmValues.concat(specialCharacters);
+  }
+  if(userOptions.chooseLowerCase) {
+    rndmValues = rndmValues.concat(lowerCaseLetters);
+  }
+  if(userOptions.chooseUpperCase) {
+    rndmValues = rndmValues.concat(upperCaseLetters);
+  }
+  if(userOptions.chooseNum) {
+    rndmValues = rndmValues.concat(numbers);
+  }
+  for( i= 0; i < userOptions.passLength; i ++) {
+    passwordFinal[i] = createRandom(rndmValues);
+  }
+  console.log(passwordFinal);
+  return passwordFinal.join("");
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
